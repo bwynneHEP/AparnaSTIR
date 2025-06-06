@@ -56,6 +56,8 @@ MULTFACTORS=../my_multfactors.hs \
 ADDSINO=../my_additive_sinogram.hs \
 OUTPUT=OSEM_recon_with_actual_scatter OSMAPOSL ../OSEM_full.par
 
+stir_math -s ../scatter_estimate${output_suffix}.hs ${scatter_prefix}_${num_scat_iters}.hs
+
 if false; then
 echo "Precorrect data for FBP"
 INPUT=${sino_input} OUTPUT=precorrected.hs \
