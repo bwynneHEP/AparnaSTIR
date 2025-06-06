@@ -32,20 +32,20 @@ output file format type:= Interfile
     scale_to_write_data:= 1
   End Interfile Output File Format Parameters:=
 
-X output image size (in pixels) := 99
-Y output image size (in pixels) := 99
-Z output image size (in pixels) := 79
-X voxel size (in mm):= 6.406
-Y voxel size (in mm):= 6.406
-Z voxel size (in mm) := 13.1645
+X output image size (in pixels) := 101
+Y output image size (in pixels) := 101
+Z output image size (in pixels) := 157
+X voxel size (in mm):= 3
+Y voxel size (in mm):= 3
+Z voxel size (in mm) := 6.582275
 
 ; parameters that determine subsampling of border voxels
 ; to obtain smooth edges
 ; setting these to 1 will just check if the centre of the voxel is in or out
 ; default to 5
-; Z number of samples to take per voxel := 5
-; Y number of samples to take per voxel := 5
-; X number of samples to take per voxel := 5
+; Z number of samples to take per voxel := 1
+; Y number of samples to take per voxel := 1
+; X number of samples to take per voxel := 1
 
 ; now follows a list of shapes and their values
 ; each will be added to the image (so values accumulate)
@@ -53,16 +53,16 @@ Z voxel size (in mm) := 13.1645
 
 shape type:= ellipsoidal cylinder
 Ellipsoidal Cylinder Parameters:=
-   radius-x (in mm) := 210
-   radius-y (in mm) := 210
-   length-z (in mm) := 600
+   radius-x (in mm) := 100
+   radius-y (in mm) := 100
+   length-z (in mm) := 800
 
    ; next keyword can be used for non-default axes
    ; values below are give a rotation around y for 90 degrees (swapping x and z)
    ; Warning: this uses the STIR convention {z,y,x}
    ; direction vectors (in mm):= { {0,0,1}, {0,1,0}, {-1,0,0}}
    ; origin w.r.t. to standard STIR coordinate system (middle of first plane)
-   origin (in mm):={230.375, 3.0192, -0.590588}
+   origin (in mm):={70,10,20}
    END:=
 value := 1
 
