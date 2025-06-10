@@ -19,20 +19,6 @@ template_projdata_filename :=  ${TEMPLATE}
 ; files will be called "out".hs and "out".log
 output_filename_prefix :=${OUTPUT_PREFIX}
 
-; automatically downsample scanner (off by default, but highly recommended)
-; output willl be downsampled as well
-; downsample scanner := 1
-; downsampled scanner number of detectors per ring := -1
-; downsampled scanner number of rings := -1
-
-; downsample the template projection data
-downsample scanner := 1 ; default value is off!
-; if the above is 1, let STIR do the downsampling (recommended!).
-; This is safer than doing it yourself, physical size will be preserved etc.
-; With the following settings it should use sensible defaults
-downsampled scanner number of detectors per ring := -1
-downsampled scanner number of rings := -1
-
 End Single Scatter Simulation Parameters:=
 End Scatter Simulation Parameters:=
 
